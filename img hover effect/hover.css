@@ -1,1 +1,108 @@
-
+*{
+    box-sizing: border-box;
+}
+body , html{
+    display: flex;
+    align-items: center;
+    background: #ddd;
+    justify-content: center;
+    width: 100%;
+    height: 99%;
+}
+.area{
+    margin-top: -250px;
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+}
+.team{
+    width: 250px;
+    height: 290px;
+    padding: 10px;
+    background: #fff;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    transition: 0.6s ease-out;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+}
+.team:hover{
+    transform: translateY(15px);
+}
+.team:hover:before{
+    opacity: 1;
+}
+.team:hover .text{
+    opacity: 1;
+    transform: translateY(0);
+}
+.team:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(top,transparent,#000);
+    z-index: 2;
+    transition: 0.5s;
+    opacity: 0;
+}
+.team img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+.team .text{
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 0.5s;
+}
+.text h2{
+    margin: 0;
+    letter-spacing: 3px;
+}
+.text p{
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 8;
+} 
+.text a{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border-radius: 50%;
+    border:1px solid #fff;
+    margin: 0 5px;
+    text-decoration: none;
+}
+.text a:hover{
+    border: transparent;
+} 
+.text a i{
+    color: #fff;
+    padding: 6px 8px;
+}
+.text p a:nth-child(1):hover{
+    color: #fff;
+    background-color: #4267b2;
+}
+.text p a:nth-child(2):hover{
+    color: #fff;
+    background-color: #1da1f2;
+}
+.text p a:nth-child(3):hover{
+    color: #fff;
+    background: linear-gradient(to top left,#ffcc00 0%,#ff33cc 100%);
+}
+.text a:hover , .text a , .text p a:nth-child(1):hover , 
+.text p a:nth-child(2):hover , .text p a:nth-child(3):hover{
+    transition: 0.5s;
+}
